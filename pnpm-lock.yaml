@@ -10,6 +10,7 @@ importers:
       bumpp: ^7.1.1
       eslint: ^8.16.0
       esno: ^0.16.3
+      husky: ^8.0.1
       pnpm: ^7.1.5
       rimraf: ^3.0.2
       typescript: ^4.7.3
@@ -23,6 +24,7 @@ importers:
       bumpp: 7.1.1
       eslint: 8.17.0
       esno: 0.16.3
+      husky: 8.0.1
       pnpm: 7.1.7
       rimraf: 3.0.2
       typescript: 4.7.3
@@ -2416,6 +2418,12 @@ packages:
       domhandler: 4.3.1
       domutils: 2.8.0
       entities: 3.0.1
+    dev: true
+
+  /husky/8.0.1:
+    resolution: {integrity: sha512-xs7/chUH/CKdOCs7Zy0Aev9e/dKOMZf3K1Az1nar3tzlv0jfqnYtu235bstsWTmXOR0EfINrPa97yy4Lz6RiKw==}
+    engines: {node: '>=14'}
+    hasBin: true
     dev: true
 
   /ignore/5.2.0:
