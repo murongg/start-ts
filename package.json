@@ -1,9 +1,10 @@
 {
-  "name": "name",
+  "name": "pkg-name",
+  "type": "module",
   "version": "0.0.0",
-  "packageManager": "pnpm@7.1.5",
+  "packageManager": "pnpm@8.6.0",
   "description": "",
-  "author": "MuRong <admin@imuboy.cn>",
+  "author": "MuRong <hi@mrong.me>",
   "license": "MIT",
   "funding": "https://github.com/sponsors/murongg",
   "homepage": "https://github.com/murongg/[name]#readme",
@@ -23,7 +24,7 @@
       "import": "./dist/index.mjs"
     }
   },
-  "main": "./dist/index.cjs",
+  "main": "./dist/index.mjs",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "typesVersions": {
@@ -38,30 +39,37 @@
     "dist"
   ],
   "scripts": {
-    "build": "rimraf dist && unbuild",
+    "build": "unbuild",
     "dev": "unbuild --stub",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "prepare": "husky install",
     "prepublishOnly": "nr build",
-    "release": "bumpp --commit --push --tag && pnpm publish",
+    "release": "bumpp && npm publish",
     "start": "esno src/index.ts",
     "test": "vitest",
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
-    "@babel/types": "^7.18.10",
-    "@murongg/eslint-config": "^0.1.2",
-    "@types/node": "^17.0.45",
-    "bumpp": "^7.2.0",
-    "eslint": "^8.21.0",
+    "@antfu/ni": "^0.21.4",
+    "@antfu/utils": "^0.7.4",
+    "@murongg/eslint-config": "^0.2.0",
+    "@types/node": "^18.16.16",
+    "bumpp": "^9.1.0",
+    "eslint": "^8.41.0",
     "esno": "^0.16.3",
-    "husky": "^8.0.1",
-    "pnpm": "^7.8.0",
-    "rimraf": "^3.0.2",
-    "typescript": "^4.7.4",
-    "unbuild": "^0.7.6",
-    "vite": "^3.0.4",
-    "vitest": "^0.12.10"
+    "lint-staged": "^13.2.2",
+    "pnpm": "^8.6.0",
+    "rimraf": "^5.0.1",
+    "simple-git-hooks": "^2.8.1",
+    "typescript": "^5.0.4",
+    "unbuild": "^1.2.1",
+    "vite": "^4.3.9",
+    "vitest": "^0.31.3"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged"
+  },
+  "lint-staged": {
+    "*": "eslint --fix"
   }
 }
