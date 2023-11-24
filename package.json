@@ -1,5 +1,5 @@
 {
-  "name": "pkg-name",
+  "name": "pkg-placeholder",
   "type": "module",
   "version": "0.0.0",
   "packageManager": "pnpm@8.10.5",
@@ -7,13 +7,13 @@
   "author": "MuRong <hi@mrong.me>",
   "license": "MIT",
   "funding": "https://github.com/sponsors/murongg",
-  "homepage": "https://github.com/murongg/[name]#readme",
+  "homepage": "https://github.com/murongg/pkg-placeholder#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/murongg/[name].git"
+    "url": "git+https://github.com/murongg/pkg-placeholder.git"
   },
   "bugs": {
-    "url": "https://github.com/murongg/[name]/issues"
+    "url": "https://github.com/murongg/pkg-placeholder/issues"
   },
   "keywords": [],
   "sideEffects": false,
