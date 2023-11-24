@@ -22,8 +22,7 @@ jobs:
       - name: Set node
         uses: actions/setup-node@v3
         with:
-          node-version: 18.x
-          cache: pnpm
+          node-version: lts/*
 
       - run: npx changelogithub
         env:
